@@ -1,2 +1,29 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
 # Local Netlify folder
 .netlify
+
+# Generated Next.js types
+next-env.d.ts
+
+# Coverage
+coverage/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+
+# Local environment files
+.env
+.env.*
+!.env.example
