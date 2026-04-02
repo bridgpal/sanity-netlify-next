@@ -1,8 +1,8 @@
-import { client } from "./client";
+import { sanityFetch } from "./live";
 
 export async function getHeroSection() {
-  return client.fetch(
-    `*[_type == "heroSection"][0]{
+  const { data } = await sanityFetch({
+    query: `*[_type == "heroSection"][0]{
       heading,
       subheading,
       primaryButtonText,
@@ -10,13 +10,14 @@ export async function getHeroSection() {
       secondaryButtonText,
       secondaryButtonLink,
       "backgroundImageUrl": backgroundImage.asset->url
-    }`
-  );
+    }`,
+  });
+  return data;
 }
 
 export async function getFeatureCards() {
-  return client.fetch(
-    `*[_type == "featureCard"] | order(order asc){
+  const { data } = await sanityFetch({
+    query: `*[_type == "featureCard"] | order(order asc){
       _id,
       title,
       description,
@@ -25,13 +26,14 @@ export async function getFeatureCards() {
       linkText,
       linkUrl,
       order
-    }`
-  );
+    }`,
+  });
+  return data;
 }
 
 export async function getBenefitCards() {
-  return client.fetch(
-    `*[_type == "benefitCard"] | order(order asc){
+  const { data } = await sanityFetch({
+    query: `*[_type == "benefitCard"] | order(order asc){
       _id,
       title,
       description,
@@ -39,24 +41,26 @@ export async function getBenefitCards() {
       linkText,
       linkUrl,
       order
-    }`
-  );
+    }`,
+  });
+  return data;
 }
 
 export async function getCtaBanner() {
-  return client.fetch(
-    `*[_type == "ctaBanner"][0]{
+  const { data } = await sanityFetch({
+    query: `*[_type == "ctaBanner"][0]{
       heading,
       subheading,
       buttonText,
       buttonLink
-    }`
-  );
+    }`,
+  });
+  return data;
 }
 
 export async function getInfoSections() {
-  return client.fetch(
-    `*[_type == "infoSection"] | order(order asc){
+  const { data } = await sanityFetch({
+    query: `*[_type == "infoSection"] | order(order asc){
       _id,
       title,
       description,
@@ -64,6 +68,7 @@ export async function getInfoSections() {
       linkText,
       linkUrl,
       order
-    }`
-  );
+    }`,
+  });
+  return data;
 }
