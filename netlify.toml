@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NEXT_PUBLIC_SANITY_PROJECT_ID = "66jdgzyv"
+  NEXT_PUBLIC_SANITY_DATASET = "production"
