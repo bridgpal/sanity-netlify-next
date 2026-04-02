@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-
 const footerSections = [
   {
     title: "Plans",
@@ -41,39 +40,55 @@ const footerSections = [
 
 export default function Footer() {
   return (
-    <footer className="bg-oscar-dark text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
-          {/* Brand */}
+    <footer className="relative bg-oscar-forest text-oscar-ivory overflow-hidden">
+      {/* Subtle organic decoration */}
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-oscar-sage/5 blob -translate-y-1/2 translate-x-1/4" />
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-16">
+          {/* Brand column */}
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-oscar-blue rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">O</span>
+            <Link href="/" className="flex items-center gap-3 mb-8 group">
+              <div className="relative w-9 h-9">
+                <div className="absolute inset-0 bg-oscar-terracotta rounded-full transition-transform duration-500 group-hover:scale-110" />
+                <span className="relative flex items-center justify-center w-full h-full text-white font-display text-lg">
+                  O
+                </span>
               </div>
-              <span className="text-xl font-bold">Oscar</span>
+              <span className="text-2xl font-display">Oscar</span>
             </Link>
-            <div className="flex gap-4 mb-6">
+
+            {/* Social links as minimal text */}
+            <div className="flex flex-wrap gap-x-4 gap-y-2 mb-8">
               {["Facebook", "YouTube", "Twitter", "Instagram"].map((name) => (
-                <a key={name} href="#" className="text-gray-400 hover:text-white transition-colors text-xs font-medium uppercase tracking-wider">
+                <a
+                  key={name}
+                  href="#"
+                  className="text-oscar-ivory/30 hover:text-oscar-gold transition-colors duration-300 text-xs font-medium uppercase tracking-wider"
+                >
                   {name}
                 </a>
               ))}
             </div>
-            <p className="text-sm text-gray-400">
-              Need help?
-              <br />
-              <a href="tel:1-855-672-2788" className="hover:text-white transition-colors">
+
+            <div className="space-y-1">
+              <p className="text-oscar-ivory/30 text-xs uppercase tracking-wider font-semibold">
+                Need help?
+              </p>
+              <a
+                href="tel:1-855-672-2788"
+                className="text-oscar-ivory/60 hover:text-oscar-gold transition-colors duration-300 text-sm block"
+              >
                 1-855-OSCAR-88
               </a>
-              <br />
-              <span className="text-xs">Mon–Fri, 8am–8pm ET</span>
-            </p>
+              <p className="text-oscar-ivory/30 text-xs">Mon–Fri, 8am–8pm ET</p>
+            </div>
           </div>
 
-          {/* Links */}
+          {/* Link columns */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h3 className="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-4">
+              <h3 className="font-display text-sm text-oscar-ivory/40 mb-5">
                 {section.title}
               </h3>
               <ul className="space-y-3">
@@ -81,7 +96,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.url}
-                      className="text-sm text-gray-300 hover:text-white transition-colors"
+                      className="text-sm text-oscar-ivory/60 hover:text-oscar-gold transition-colors duration-300"
                     >
                       {link.label}
                     </a>
@@ -92,25 +107,24 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-400">
+        {/* Bottom bar with refined divider */}
+        <div className="border-t border-oscar-ivory/8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-oscar-ivory/30 tracking-wide">
             &copy; {new Date().getFullYear()} Oscar Health, Inc. All rights
             reserved.
           </p>
-          <div className="flex flex-wrap gap-6 text-sm text-gray-400">
-            <a href="#" className="hover:text-white transition-colors">
-              Terms of Use
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              Accessibility
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              Cookie Preferences
-            </a>
+          <div className="flex flex-wrap gap-6 text-xs text-oscar-ivory/30">
+            {["Terms of Use", "Privacy Policy", "Accessibility", "Cookie Preferences"].map(
+              (item) => (
+                <a
+                  key={item}
+                  href="#"
+                  className="hover:text-oscar-gold transition-colors duration-300"
+                >
+                  {item}
+                </a>
+              )
+            )}
           </div>
         </div>
       </div>
