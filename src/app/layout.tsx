@@ -41,7 +41,7 @@ export default async function RootLayout({
         {children}
         <SanityLive />
         {shouldEnableVisualEditing && <VisualEditing />}
-        <DraftModeBanner />
+        <DraftModeBanner isDraftModeEnabled={isDraftMode} />
       </body>
     </html>
   );
