@@ -4,6 +4,7 @@ import { dashboardTool } from "@sanity/dashboard";
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { visionTool } from "@sanity/vision";
+import { presentationTool } from "sanity/presentation";
 import { netlifyWidget } from "sanity-plugin-dashboard-widget-netlify";
 import { schema } from "@/sanity/schema";
 import { projectId, dataset } from "@/sanity/config";
@@ -59,6 +60,13 @@ export default defineConfig({
         : [],
     }),
     structureTool(),
+    presentationTool({
+      previewUrl: {
+        previewMode: {
+          enable: "/api/draft-mode/enable",
+        },
+      },
+    }),
     visionTool(),
   ],
   schema,
