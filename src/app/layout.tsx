@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { VisualEditing } from "next-sanity/visual-editing";
-import { draftMode } from "next/headers";
+import { draftMode, headers } from "next/headers";
 import { SanityLive } from "@/sanity/live";
 import DraftModeBanner from "@/components/DraftModeBanner";
 import "./globals.css";
@@ -28,6 +28,9 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const { isEnabled: isDraftMode } = await draftMode();
+  const requestHeaders = await headers();
+  const isIframeRequest = requestHeaders.get("sec-fetch-dest") === "iframe";
+  const shouldEnableVisualEditing = isDraftMode && isIframeRequest;
 
   return (
     <html
@@ -37,7 +40,7 @@ export default async function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <SanityLive />
-        {isDraftMode && <VisualEditing />}
+        {shouldEnableVisualEditing && <VisualEditing />}
         <DraftModeBanner />
       </body>
     </html>
