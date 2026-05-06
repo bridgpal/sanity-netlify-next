@@ -42,8 +42,8 @@ function getNetlifySite(): NetlifySite | null {
 const netlifySite = getNetlifySite();
 
 export default defineConfig({
-  name: "oscar-health-studio",
-  title: "Oscar Health Studio",
+  name: "healthco-studio",
+  title: "HealthCo Studio",
   projectId,
   dataset,
   plugins: [

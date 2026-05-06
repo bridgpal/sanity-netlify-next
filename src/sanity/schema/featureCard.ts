@@ -17,7 +17,7 @@ export const featureCard = defineType({
       name: "color",
       title: "Accent Color",
       type: "string",
-      description: "Tailwind CSS color class (e.g., 'bg-oscar-blue', 'bg-oscar-green')",
+      description: "Tailwind CSS color class (e.g., 'bg-healthco-blue', 'bg-healthco-green')",
     }),
     defineField({ name: "linkText", title: "Link Text", type: "string" }),
     defineField({ name: "linkUrl", title: "Link URL", type: "string" }),

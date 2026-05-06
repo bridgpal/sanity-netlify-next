@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Oscar Health | Health Insurance Made for Real Life",
+  title: "HealthCo | Health Insurance Made for Real Life",
   description:
-    "Oscar Health makes health insurance simple. Get affordable plans, virtual care, $3 medications, and a dedicated Care Team.",
+    "HealthCo makes health insurance simple. Get affordable plans, virtual care, $3 medications, and a dedicated Care Team.",
 };
 
 export default async function RootLayout({
