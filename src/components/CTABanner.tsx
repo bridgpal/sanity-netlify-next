@@ -19,7 +19,7 @@ export default function CTABanner({ data }: { data?: CTABannerData | null }) {
   const cta = { ...defaults, ...data };
 
   return (
-    <section className="bg-oscar-blue py-16 lg:py-20">
+    <section className="bg-healthco-blue py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="flex justify-center mb-6">
           <HelpCircle className="w-12 h-12 text-white/80" />
@@ -32,7 +32,7 @@ export default function CTABanner({ data }: { data?: CTABannerData | null }) {
         </p>
         <a
           href={cta.buttonLink}
-          className="inline-flex items-center gap-2 bg-white text-oscar-blue px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors"
+          className="inline-flex items-center gap-2 bg-white text-healthco-blue px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors"
         >
           {cta.buttonText}
           <ArrowRight className="w-5 h-5" />

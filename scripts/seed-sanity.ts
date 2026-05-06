@@ -42,9 +42,9 @@ const documents = [
     _id: "feature-1",
     title: "Access your account",
     description:
-      "Set up your Oscar account to manage your plan, view your ID card, and more.",
+      "Set up your HealthCo account to manage your plan, view your ID card, and more.",
     icon: "UserCheck",
-    color: "bg-oscar-blue",
+    color: "bg-healthco-blue",
     linkText: "Activate account",
     linkUrl: "#activate",
     order: 1,
@@ -56,7 +56,7 @@ const documents = [
     description:
       "Set up autopay so you never miss a payment. It's fast, easy, and secure.",
     icon: "CreditCard",
-    color: "bg-oscar-green",
+    color: "bg-healthco-green",
     linkText: "Set up autopay",
     linkUrl: "#autopay",
     order: 2,
@@ -68,7 +68,7 @@ const documents = [
     description:
       "Search our network to find doctors, specialists, and facilities near you.",
     icon: "Stethoscope",
-    color: "bg-oscar-coral",
+    color: "bg-healthco-coral",
     linkText: "Find a doctor",
     linkUrl: "#doctors",
     order: 3,
@@ -124,7 +124,7 @@ const documents = [
   {
     _type: "infoSection",
     _id: "info-1",
-    title: "Oscar for Employers",
+    title: "HealthCo for Employers",
     description: "Offer your team health insurance they'll actually love.",
     emoji: "🏢",
     linkText: "Learn more",
@@ -134,7 +134,7 @@ const documents = [
   {
     _type: "infoSection",
     _id: "info-2",
-    title: "What Oscar does",
+    title: "What HealthCo does",
     description:
       "We use technology and a human touch to make health insurance simpler.",
     emoji: "❤️",
@@ -145,7 +145,7 @@ const documents = [
   {
     _type: "infoSection",
     _id: "info-3",
-    title: "AI @ Oscar",
+    title: "AI @ HealthCo",
     description:
       "See how we use AI to improve the healthcare experience for everyone.",
     emoji: "🧠",
